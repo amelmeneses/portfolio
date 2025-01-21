@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
       {/* Imagen */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Image
-          src="/images/about-me.jpeg" // Ruta de tu imagen
+          src="/images/about_me.jpeg" // Ruta de tu imagen
           alt="Sobre mí"
           width={400} // Ancho personalizado para mantener la optimización
           height={400} // Altura personalizada para mantener la optimización
@@ -42,7 +42,7 @@ const AboutMe: React.FC = () => {
           Siempre estoy buscando nuevos desafíos y oportunidades para crecer.
         </p>
         <a
-          href="/files/CV_Meneses_Amel.pdf" // Ruta del archivo PDF
+          href="/files_temp/cv_amel_meneses.pdf" // Ruta del archivo PDF
           download // Este atributo fuerza la descarga del archivo
           className="inline-block mt-6 px-6 py-3 bg-black text-white font-dinLight text-font-1 uppercase rounded-full shadow-lg hover:bg-turquoise/80 transition-colors duration-300"
         >
