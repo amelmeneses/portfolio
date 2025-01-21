@@ -53,6 +53,10 @@ export default {
           "50%": { transform: "rotate(0) translateY(6px)" },
           "100%": { transform: "rotate(0)" },
         },
+        infinityLoop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
 
       animation: {
@@ -60,6 +64,7 @@ export default {
         slideOut: "slideOut 0.3s ease-out",
         burgerToX: "burgerToX 0.3s ease-in-out forwards",
         xToBurger: "xToBurger 0.3s ease-in-out forwards",
+        infinityLoop: "infinityLoop 30s linear infinite",
       },
 
     },

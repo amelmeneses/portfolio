@@ -6,15 +6,18 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full flex items-center justify-center bg-gradient-to-r from-turquoise via-white to-turquoise"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
     >
-      {/* Fondo del Hero */}
-      <div className="absolute inset-0">
-        <img
-          src="/images/cielo.jpg" // Ruta de tu imagen
-          alt="Cielo"
-          className="w-full h-full object-cover"
-        />
+      {/* Fondo del Hero con animación de loop infinito */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute inset-0 w-[200%] h-full bg-cover bg-no-repeat animate-infinityLoop"
+          style={{
+            backgroundImage: "url('/images/cielo.jpg')", // Ruta de la imagen
+            backgroundPosition: "center bottom", // Usamos la mitad inferior
+            backgroundSize: "cover",
+          }}
+        ></div>
       </div>
 
       {/* Contenido del Hero */}
