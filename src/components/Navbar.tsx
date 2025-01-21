@@ -4,18 +4,9 @@ import React, { useState } from "react";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleMenuToggle = () => {
-    if (isOpen) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setIsOpen(false);
-        setIsAnimating(false);
-      }, 300); // Duración de la animación (0.3s)
-    } else {
-      setIsOpen(true);
-    }
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -29,20 +20,26 @@ const Navbar: React.FC = () => {
           </p>
         </div>
 
-        {/* Icono de hamburguesa */}
+        {/* Botón de menú hamburguesa */}
         <button
-          className="text-black focus:outline-none md:hidden"
+          className="relative w-8 h-8 flex flex-col justify-between items-center md:hidden z-[100]"
           onClick={handleMenuToggle}
         >
-          {isOpen ? (
-            <span className="text-2xl font-bold">&times;</span>
-          ) : (
-            <div className="space-y-2">
-              <div className="w-6 h-0.5 bg-black"></div>
-              <div className="w-6 h-0.5 bg-black"></div>
-              <div className="w-6 h-0.5 bg-black"></div>
-            </div>
-          )}
+          <span
+            className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${
+              isOpen ? "rotate-45 translate-y-2.5" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-full h-0.5 bg-black transition-all duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-2.5" : ""
+            }`}
+          ></span>
         </button>
 
         {/* Menú de navegación para desktop */}
@@ -85,18 +82,8 @@ const Navbar: React.FC = () => {
       {/* Menú desplegable para mobile */}
       {isOpen && (
         <div
-          className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-white ${
-            isAnimating ? "animate-slideOut" : "animate-slideIn"
-          }`}
+          className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-white animate-slideIn`}
         >
-          {/* Botón de cierre */}
-          <button
-            className="absolute top-6 right-6 text-4xl font-bold text-black focus:outline-none"
-            onClick={handleMenuToggle}
-          >
-            &times;
-          </button>
-
           {/* Menú con líneas de separación */}
           <div className="flex flex-col space-y-4 w-full max-w-xs">
             <a
