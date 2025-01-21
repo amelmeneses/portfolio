@@ -11,11 +11,10 @@ const Hero: React.FC = () => {
       {/* Fondo del Hero */}
       <div className="absolute inset-0">
         <img
-          src="/path-to-your-background.jpg" // Reemplaza con la ruta de tu imagen
-          alt="Background"
+          src="/images/cielo.jpg" // Ruta de tu imagen
+          alt="Cielo"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black opacity-30"></div>
       </div>
 
       {/* Contenido del Hero */}
@@ -23,9 +22,7 @@ const Hero: React.FC = () => {
         <p className="font-avenirLight text-black text-[17px] leading-[1.4em] text-center uppercase">
           Diseñar es dar vida a las
         </p>
-        <h1 className="font-lulo text-font-3 text-black mt-4">
-          Ideas
-        </h1>
+        <h1 className="font-lulo text-[110px] text-black mt-4">Ideas</h1>
         <div className="mt-8">
           <a
             href="#contact"
