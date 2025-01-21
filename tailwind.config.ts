@@ -53,6 +53,7 @@ export default {
           "50%": { transform: "rotate(0) translateY(6px)" },
           "100%": { transform: "rotate(0)" },
         },
+
         infinityLoop: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },

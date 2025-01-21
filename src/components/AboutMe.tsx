@@ -19,7 +19,7 @@ const AboutMe: React.FC = () => {
 
       {/* Contenido */}
       <div className="mt-8 md:mt-0 md:ml-12 w-full md:w-1/2 text-center md:text-left">
-        <h2 className="font-lulo text-font-2 text-black">Sobre Mí</h2>
+        <h2 className="font-lulo text-[26px] sm:text-[40px] lg:text-font-2  text-black">Sobre Mí</h2>
         <p className="font-avenirLight text-font-1 text-gray-600 mt-4 leading-relaxed">
           Soy Amel Meneses, diseñadora UX-UI y desarrolladora web con una sólida
           formación en tecnología y diseño. Actualmente curso el séptimo semestre de

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 const projects = [
+  // Proyectos (se mantienen iguales)
   {
     id: 1,
     title: "Proyecto Social Gals",
@@ -60,7 +61,9 @@ const Portfolio: React.FC = () => {
     <section id="portfolio" className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
       {/* Título de la sección */}
       <div className="text-center mb-12">
-        <h2 className="font-lulo text-font-2 text-black">Portafolio</h2>
+            <h2 className="font-lulo text-[26px] sm:text-[40px] lg:text-font-2 text-black">
+            Portafolio
+            </h2>
         <p className="font-avenirLight text-font-5 text-gray-600 mt-4">
           Algunos de mis proyectos más destacados
         </p>

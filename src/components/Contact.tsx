@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
       id="contact"
       className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50 text-center"
     >
-      <h2 className="font-lulo text-font-2 text-black mb-8">Contáctame</h2>
+      <h2 className="font-lulo text-[26px] sm:text-[40px] lg:text-font-2 text-black mb-8">Contáctame</h2>
       <p className="font-avenirLight text-font-5 text-gray-600 mb-8">
         Estoy disponible para nuevos proyectos y colaboraciones. Puedes
         contactarme a través de las siguientes plataformas:

@@ -6,16 +6,16 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black"
     >
       {/* Fondo del Hero con animación de loop infinito */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute inset-0 w-[200%] h-full bg-cover bg-no-repeat animate-infinityLoop"
+          className="absolute w-[200%] h-full bg-cover bg-no-repeat animate-infinityLoop"
           style={{
             backgroundImage: "url('/images/cielo.jpg')", // Ruta de la imagen
             backgroundPosition: "center bottom", // Usamos la mitad inferior
-            backgroundSize: "cover",
+            backgroundSize: "100% 100%",
           }}
         ></div>
       </div>
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         <p className="font-avenirLight text-black text-[17px] leading-[1.4em] text-center uppercase">
           Diseñar es dar vida a las
         </p>
-        <h1 className="font-lulo text-[110px] text-black mt-4">Ideas</h1>
+        <h1 className="font-lulo text-[55px] md:text-[110px] text-black mt-4">Ideas</h1>
         <div className="mt-8">
           <a
             href="https://wa.me/593999223244?text=Hola%20Amel,%20me%20encantaría%20saber%20más%20sobre%20tu%20trabajo!" // Cambia el número de teléfono
