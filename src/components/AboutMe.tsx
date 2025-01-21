@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const AboutMe: React.FC = () => {
   return (
@@ -10,16 +11,20 @@ const AboutMe: React.FC = () => {
     >
       {/* Imagen */}
       <div className="w-full md:w-1/2 flex justify-center">
-        <img
-          src="/images/about-me.jpeg" //ruta de tu imagen
-          alt="About Me"
-          className="rounded-lg shadow-lg object-cover w-full max-w-sm md:max-w-md"
+        <Image
+          src="/images/about-me.jpeg" // Ruta de tu imagen
+          alt="Sobre mí"
+          width={400} // Ancho personalizado para mantener la optimización
+          height={400} // Altura personalizada para mantener la optimización
+          className="rounded-lg shadow-lg object-cover"
         />
       </div>
 
       {/* Contenido */}
       <div className="mt-8 md:mt-0 md:ml-12 w-full md:w-1/2 text-center md:text-left">
-        <h2 className="font-lulo text-[26px] sm:text-[40px] lg:text-font-2  text-black">Sobre Mí</h2>
+        <h2 className="font-lulo text-[26px] sm:text-[40px] lg:text-font-2 text-black">
+          Sobre Mí
+        </h2>
         <p className="font-avenirLight text-font-1 text-gray-600 mt-4 leading-relaxed">
           Soy Amel Meneses, diseñadora UX-UI y desarrolladora web con una sólida
           formación en tecnología y diseño. Actualmente curso el séptimo semestre de

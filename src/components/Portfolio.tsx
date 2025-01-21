@@ -1,9 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
-const projects = [
-  // Proyectos (se mantienen iguales)
+// Define el tipo para los proyectos
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  tasks: string[];
+  image: string;
+  link?: string;
+};
+
+const projects: Project[] = [
   {
     id: 1,
     title: "Proyecto Social Gals",
@@ -47,9 +57,9 @@ const projects = [
 ];
 
 const Portfolio: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const openModal = (project: any) => {
+  const openModal = (project: Project) => {
     setSelectedProject(project);
   };
 
@@ -61,12 +71,8 @@ const Portfolio: React.FC = () => {
     <section id="portfolio" className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
       {/* Título de la sección */}
       <div className="text-center mb-12">
-            <h2 className="font-lulo text-[26px] sm:text-[40px] lg:text-font-2 text-black">
-            Portafolio
-            </h2>
-        <p className="font-avenirLight text-font-5 text-gray-600 mt-4">
-          Algunos de mis proyectos más destacados
-        </p>
+        <h2 className="font-lulo text-[26px] sm:text-[40px] lg:text-font-2 text-black">Portafolio</h2>
+        <p className="font-avenirLight text-font-5 text-gray-600 mt-4">Algunos de mis proyectos más destacados</p>
       </div>
 
       {/* Galería de proyectos */}
@@ -75,17 +81,17 @@ const Portfolio: React.FC = () => {
           <div
             key={project.id}
             className="project-box relative group overflow-hidden rounded-lg shadow-lg aspect-square cursor-pointer"
-            onClick={() => openModal(project)} // Abrir modal con datos del proyecto
+            onClick={() => openModal(project)}
           >
-            <img
+            <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              layout="fill"
+              objectFit="cover"
+              className="transition-transform duration-300 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <p className="text-white font-dinLight font-bold text-font-5 text-center">
-                {project.title}
-              </p>
+              <p className="text-white font-dinLight font-bold text-font-5 text-center">{project.title}</p>
             </div>
           </div>
         ))}
@@ -99,7 +105,7 @@ const Portfolio: React.FC = () => {
         >
           <div
             className="bg-white w-[90%] md:w-[60%] lg:w-[40%] rounded-lg shadow-lg overflow-hidden animate-slideIn"
-            onClick={(e) => e.stopPropagation()} // Evitar que el modal se cierre al hacer clic dentro
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
             <div className="flex justify-between items-center bg-gray-100 px-4 py-2 border-b">
@@ -114,16 +120,16 @@ const Portfolio: React.FC = () => {
 
             {/* Modal Content */}
             <div className="p-4">
-              <img
+              <Image
                 src={selectedProject.image}
                 alt={selectedProject.title}
+                width={400}
+                height={400}
                 className="w-full h-[400px] object-cover rounded-md mb-4"
               />
-              <p className="font-avenirLight text-font-6 text-gray-600 mb-4">
-                {selectedProject.description}
-              </p>
+              <p className="font-avenirLight text-font-6 text-gray-600 mb-4">{selectedProject.description}</p>
               <ul className="list-disc pl-5 mb-4 text-font-6 text-gray-600">
-                {selectedProject.tasks.map((task: string, index: number) => (
+                {selectedProject.tasks.map((task, index) => (
                   <li key={index}>{task}</li>
                 ))}
               </ul>
