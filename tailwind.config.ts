@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        turquoise: '#66D2DC'
       },
 
       fontFamily: {

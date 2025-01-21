@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="#hero"
-              className="font-dinLight text-font-1 hover:text-blue-500 transition-colors duration-300"
+              className="font-dinLight text-font-1 hover:text-turquoise transition-colors duration-300"
             >
               Inicio
             </a>
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="#about"
-              className="font-dinLight text-font-1 hover:text-blue-500 transition-colors duration-300"
+              className="font-dinLight text-font-1 hover:text-turquoise transition-colors duration-300"
             >
               Sobre Mí
             </a>
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="#portfolio"
-              className="font-dinLight text-font-1 hover:text-blue-500 transition-colors duration-300"
+              className="font-dinLight text-font-1 hover:text-turquoise transition-colors duration-300"
             >
               Portafolio
             </a>
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="#contact"
-              className="font-dinLight text-font-1 hover:text-blue-500 transition-colors duration-300"
+              className="font-dinLight text-font-1 hover:text-turquoise transition-colors duration-300"
             >
               Contacto
             </a>
