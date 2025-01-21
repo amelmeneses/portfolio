@@ -57,6 +57,17 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+
+        slideInmodal: {
+          "0%": { transform: "translateY(-20%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        
       },
 
       animation: {
@@ -65,6 +76,8 @@ export default {
         burgerToX: "burgerToX 0.3s ease-in-out forwards",
         xToBurger: "xToBurger 0.3s ease-in-out forwards",
         infinityLoop: "infinityLoop 30s linear infinite",
+        fadeIn: "fadeIn 0.3s ease-in-out",
+        slideInmodal: "slideIn 0.3s ease-in-out",
       },
 
     },
