@@ -27,7 +27,7 @@ const projects: Project[] = [
     title: "Proyecto Playbooker",
     description: "Proyecto para poner en práctica destrezas adquiridas para realizar diseño en desktop además de ser el diseño para el proyecto de titulación.",
     tasks: ["Reserva de canchas", "Implementación React", "Manejo de base de datos"],
-    image: "/images/mockup3.png",
+    image: "/images/mockup3_temp.png",
     link: "https://www.figma.com/proto/7i50rFlYxCdY2bIptZdeBZ/Proyecto-2",
   },
   {
