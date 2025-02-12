@@ -48,6 +48,14 @@ const AboutMe: React.FC = () => {
         >
           Descargar CV
         </a>
+          <a
+            href="https://wa.me/593999223244?text=Hola%20Amel,%20me%20encantaría%20saber%20más%20sobre%20tu%20trabajo!" // Cambia el número de teléfono
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-black text-white font-dinLight text-font-1 uppercase rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-300"
+          >
+            Contáctame
+          </a>
       </div>
     </section>
   );
