@@ -4,7 +4,6 @@ import React from "react";
 import { useParams, notFound } from "next/navigation";
 import Image from "next/image";
 import { projects } from "../projects"; // Importamos la lista de proyectos
-import { Autour_One } from "next/font/google";
 
 const ProjectPage: React.FC = () => {
   const { id } = useParams(); // Obtener el ID del proyecto desde la URL
