@@ -23,9 +23,12 @@ const Hero: React.FC = () => {
       {/* Contenido del Hero */}
       <div className="relative z-10 text-center">
         <p className="font-avenirLight text-black text-[17px] leading-[1.4em] text-center uppercase">
-          Diseñar es dar vida a las
+        Nuestro papel es imaginar productos que no existen y hacerlos 
         </p>
-        <h1 className="font-lulo text-[55px] md:text-[110px] text-black mt-4">Ideas</h1>
+        <h1 className="font-lulo text-[55px] md:text-[110px] text-black mt-4">  realidad</h1>
+        <p className="font-avenirLight text-black text-[17px] leading-[1.4em] text-center uppercase">
+        Christopher Stringer
+        </p>
       </div>
     </section>
   );
