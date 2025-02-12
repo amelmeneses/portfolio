@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
       {/* Imagen */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Image
-          src="/images/about_me.jpeg" // Ruta de tu imagen
+          src="/images/about_me_temp.jpeg" // Ruta de tu imagen
           alt="Sobre mí"
           width={400} // Ancho personalizado para mantener la optimización
           height={400} // Altura personalizada para mantener la optimización
@@ -41,21 +41,28 @@ const AboutMe: React.FC = () => {
         <p className="font-avenirLight text-font-1 text-gray-600 mt-4 leading-relaxed">
           Siempre estoy buscando nuevos desafíos y oportunidades para crecer.
         </p>
-        <a
-          href="/files_temp/cv_amel_meneses.pdf" // Ruta del archivo PDF
-          download // Este atributo fuerza la descarga del archivo
-          className="inline-block mt-6 px-6 py-3 bg-black text-white font-dinLight text-font-1 uppercase rounded-full shadow-lg hover:bg-turquoise/80 transition-colors duration-300"
-        >
-          Descargar CV
-        </a>
+
+        {/* Botones */}
+        <div className="mt-6 flex flex-col sm:flex-row sm:space-x-4">
+          {/* Botón Descargar CV */}
+          <a
+            href="/files_temp/cv_amel_meneses.pdf" // Ruta del archivo PDF
+            download // Este atributo fuerza la descarga del archivo
+            className="inline-block px-6 py-3 bg-black text-white font-dinLight text-font-1 uppercase rounded-full shadow-lg hover:bg-turquoise/80 transition-colors duration-300"
+          >
+            Descargar CV
+          </a>
+
+          {/* Botón Contáctame */}
           <a
             href="https://wa.me/593999223244?text=Hola%20Amel,%20me%20encantaría%20saber%20más%20sobre%20tu%20trabajo!" // Cambia el número de teléfono
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-black text-white font-dinLight text-font-1 uppercase rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-300"
+            className="mt-4 sm:mt-0 px-6 py-3 bg-black text-white font-dinLight text-font-1 uppercase rounded-full shadow-lg hover:bg-turquoise/80 transition-colors duration-300"
           >
             Contáctame
           </a>
+        </div>
       </div>
     </section>
   );
